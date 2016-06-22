@@ -7,7 +7,7 @@ public class Parse {
 
     public static void main(String[] args) throws IOException, ClassNotFoundException {
 
-        BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("/home/dchatzakou/Documents/IdeaProjects/parseXLSfile/data/actions-data.tsv"), "UTF-8"));
+        BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("data/actions-data.tsv"), "UTF-8"));
         String line;
 
         //connect to db
