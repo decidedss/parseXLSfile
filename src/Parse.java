@@ -7,11 +7,9 @@ public class Parse {
 
     public static void main(String[] args) throws IOException, ClassNotFoundException {
 
-        BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("data/actions-data.tsv"), "UTF-8"));
+        BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(Config.dbDataDir), "UTF-8"));
         String line;
 
-        //connect to db
-        String JDBC_DRIVER = "org.postgresql.Driver";
         Class.forName("org.postgresql.Driver");
 
         Connection con = null;
@@ -24,7 +22,7 @@ public class Parse {
             statement = con.createStatement();
 
             //truncate old data
-            statement.executeUpdate("TRUNCATE " + Config.tbl);
+            statement.executeUpdate("TRUNCATE " + Config.tbl + " RESTART IDENTITY");
             con.commit();
         } catch (SQLException e) {
             System.err.println(e.getMessage());

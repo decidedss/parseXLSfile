@@ -3,7 +3,10 @@
     <output-path>$PROJECT_DIR$/out/artifacts/parseXLSfile_jar</output-path>
     <root id="archive" name="parseXLSfile.jar">
       <element id="module-output" name="parseXLSfile" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/postgresql-9.4.1208.jre6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/postgresql-9.4.1207.jre6.jar" path-in-jar="/" />
+      <element id="library" level="project" name="jsoup-1.8.3" />
+      <element id="library" level="project" name="postgresql-9.4.1207.jre6" />
+      <element id="file-copy" path="$PROJECT_DIR$/data/actions-data.tsv" />
     </root>
   </artifact>
 </component>
